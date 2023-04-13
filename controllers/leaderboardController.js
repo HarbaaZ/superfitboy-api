@@ -31,7 +31,7 @@ exports.getScores = catchAsyncErrors(async (req, res, next) => {
 
     const results = []
 
-    leaderboard.forEach((leaderboardLine, index) => {
+    leaderboard.forEach((leaderboardLine) => {
         const score = `${leaderboardLine.score.getMinutes()}:${leaderboardLine.score.getSeconds()}:${leaderboardLine.score.getMilliseconds()}`
         const player = leaderboardLine.player
         const map = leaderboardLine.map
